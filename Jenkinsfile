@@ -8,7 +8,7 @@ stages{
 	stage('init'){
 	steps{
 
-	sh 'docker rm -f $(docker ps -aq)'
+	sh 'docker rm -f $(docker ps -aq) || true'
 }
 }
 	stage('build'){
